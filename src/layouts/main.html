@@ -1,5 +1,6 @@
 <!DOCTYPE {{{ page.doctype || 'html' }}}>
 <html lang="{{ page.language || 'en' }}" xmlns:v="urn:schemas-microsoft-com:vml">
+
 <head>
   <meta charset="{{ page.charset || 'utf-8' }}">
   <meta name="x-apple-disable-message-reformatting">
@@ -22,11 +23,16 @@
   <if condition="page.title">
     <title>{{{ page.title }}}</title>
   </if>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <style>
     {{{ page.css }}}
   </style>
   <stack name="head" />
 </head>
+
 <body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] {{ page.bodyClass || '' }}">
   <if condition="page.preheader">
     <div class="hidden">
@@ -34,8 +40,10 @@
       <each loop="item in Array.from(Array(150))">&#8199;&#65279;&#847; </each>
     </div>
   </if>
-  <div role="article" aria-roledescription="email" aria-label="{{{ page.title || '' }}}" lang="{{ page.language || 'en' }}">
+  <div role="article" aria-roledescription="email" aria-label="{{{ page.title || '' }}}"
+    lang="{{ page.language || 'en' }}">
     <content />
   </div>
 </body>
+
 </html>
