@@ -18,6 +18,7 @@ module.exports = {
       destination: {
         path: 'build_local',
       },
+      extensions: ['.html'],
       assets: {
         source: 'src/images',
         destination: 'images',
